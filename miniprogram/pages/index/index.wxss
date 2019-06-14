@@ -1,0 +1,94 @@
+/**index.wxss**/
+
+page {
+  background: #f6f6f6;
+  position:fixed;
+}
+
+.list {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin-top: 20%;
+}
+
+.list-item {
+  position: relative;
+  display: inlint-block;
+  width: 300px;
+}
+
+.counter {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  pointer-events: none;
+}
+
+.knob {
+  position: absolute;
+  left: 204px;
+  top: 91px;
+  width: 36px;
+  height: 48px;
+}
+
+.active .counter{
+  width: 300px;
+  height: 300px;
+}
+
+.active .button {
+  width:56px;
+  height:60px;
+  left:123px;
+  top:10px;
+}
+
+.button {
+  width:20px;
+  height:20px;
+  position:absolute;
+  left:40px;
+  top:3px;
+}
+
+.name {
+  position:absolute;
+  left:30px;
+  top:66px;
+  color:#fff;
+  width:40px;
+  text-align:center;
+  font-size: 12px;
+}
+
+.active .name {
+  left:60px;
+  top:140px;
+  width:80px;
+  font-size: 14px;
+}
+
+.num {
+  display: flex;
+  width:24px;
+  height:12px;
+  line-height:12px;
+  overflow: hidden;
+  position:absolute;
+  top:34px;
+  color:#fff;
+  left:39px;
+  font-size:10px;
+}
+
+.active .num {
+  height:25px;
+  line-height:25px;
+  left:118px;
+  top:103px;
+  width:71px;
+  font-size:18px;
+  letter-spacing:8px;
+}

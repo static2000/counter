@@ -1,0 +1,36 @@
+<!--miniprogram/pages/todoList/todoList.wxml-->
+<!-- <view class="option">
+  <input placeholder="计数器的名字" bindinput="bindKeyInput" auto-focus/>
+  <button bindtap="addNewCounter" size="mini">addNewCounter</button>
+</view> -->
+<view class="list">
+  <view
+      class="list-item {{ active === item.name ? 'active' : '' }}"
+      wx:for="{{list}}" 
+      data-id="{{item._id}}"
+      data-name="{{item.name}}"
+  >
+      <image class="knob" catch:touchstart="imgTouchStart" capture-bind:touchend="imgTouchEnd" capture-bind:touchmove="touchmove" class="knob" data-name="{{item.name}}" data-countshow="{{item.countShow}}" src="../../images/knob.svg" mode="aspectFit"></image>
+      <image class="counter" data-name="{{item.name}}" data-countshow="{{item.countShow}}" src="../../images/counter.svg" mode="aspectFit"></image>
+      <image class="button" animation="{{active === item.name ? buttonAnimate : undefined}}" data-name="{{item.name}}" catch:touchstart="plusCountAnimate" catch:touchend="plusCount" src="../../images/button.svg" mode="aspectFit" hover-class="btn_hover"></image>
+      <view class="num">
+        <view style="transform: translate(0, {{ translateY[0] }})">
+          <view>{{ item.countShow[0] }}</view>
+          <view>{{ item.countNext[0] }}</view>
+        </view>
+        <view style="transform: translate(0, {{ translateY[1] }})">
+          <view>{{ item.countShow[1] }}</view>
+          <view>{{ item.countNext[1] }}</view>
+        </view>
+        <view style="transform: translate(0, {{ translateY[2] }})">
+          <view>{{ item.countShow[2] }}</view>
+          <view>{{ item.countNext[2] }}</view>
+        </view>
+        <view style="transform: translate(0, {{ translateY[3] }})">
+          <view>{{ item.countShow[3] }}</view>
+          <view>{{ item.countNext[3] }}</view>
+        </view>
+      </view>
+      <!-- <text class="name">{{item.name}}</text> -->
+  </view>
+</view>
